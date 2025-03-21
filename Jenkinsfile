@@ -1,8 +1,9 @@
 pipeline{
+    agent any
     stages{
         stage('clone repo'){
             steps{
-                git credentialId : "Demotoken", url:"https://github.com/Arushi9741/sample.git", branch:"main"
+                git credentialsId : "Demotoken", url:"https://github.com/Arushi9741/sample.git", branch:"main"
             }
         }
         stage('Dependency'){
